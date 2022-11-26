@@ -87,7 +87,14 @@ public class Ejercicio01a14 {
                     System.out.println();
                     break;
                 case 8:
-                    
+                    System.out.print("Introduce un numero: ");
+                    numero = sc.nextInt();
+                    System.out.print("Introduce el digito para saber su posición: ");
+                    numero2 = sc.nextInt();
+                    System.out.println("Numero: " + numero);
+                    System.out.println("Digito: " + numero2);
+                    System.out.println("Posición de " + numero2 + ": " + matematicas.Funciones.posicionDeDigito(numero, numero2));
+                    System.out.println();
                     break;
                 case 9:
                     

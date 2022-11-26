@@ -117,4 +117,23 @@ public class Funciones {
         }
         return (x % 10);
     } 
+    
+    /*************************************************
+     * @param n Da la posición de la primera         * 
+     * ocurrencia de un dígito dentro de un número   *
+     * entero. Si no se encuentra, devuelve -1.      *
+     * @return devuelve el dígito                    *
+     *************************************************/
+    public static int posicionDeDigito(int x, int n) {
+        x = voltea(x);
+        int posicion = 0;
+        do {
+            if (x % 10 == n) {
+                return posicion;
+            }
+            x /= 10;
+            posicion++;
+        } while (x > 0);
+        return -1;
+    } 
 }
