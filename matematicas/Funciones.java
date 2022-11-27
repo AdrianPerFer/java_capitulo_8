@@ -199,9 +199,8 @@ public class Funciones {
     } 
 
     /*************************************************
-     * @param n introduce la posición inicial        *
-     * @param n1 introduce la posición final         *
-     * @param x introduce el número                  *
+     * @param x introduce el primer número           *
+     * @param x1 introduce el segund                 *
      * @return devuelve el número modificado         *
      *************************************************/
     public static int juntaNumeros(int x, int x1) {
