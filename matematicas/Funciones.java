@@ -105,9 +105,8 @@ public class Funciones {
     }
 
     /*************************************************
-     * @param n Devuelve el dígito que está en la    *
-     * posición n de un número entero. Se empieza    *
-     * contando por el 0 y de izquierda a derecha    *
+     * @param n introduce el dígito                  *
+     * @param x Introduce el número                  *
      * @return devuelve el dígito                    *
      *************************************************/
     public static int digitoN(int x, int n) {
@@ -119,9 +118,8 @@ public class Funciones {
     } 
     
     /*************************************************
-     * @param n Da la posición de la primera         * 
-     * ocurrencia de un dígito dentro de un número   *
-     * entero. Si no se encuentra, devuelve -1.      *
+     * @param n introduce el dígito                  *
+     * @param x Introduce el número                  *
      * @return devuelve el dígito                    *
      *************************************************/
     public static int posicionDeDigito(int x, int n) {
@@ -135,5 +133,79 @@ public class Funciones {
             posicion++;
         } while (x > 0);
         return -1;
+    } 
+
+    /*************************************************
+     * @param n introduce el dígito                  *
+     * @param x Introduce el número                  *
+     * @return devuelve el número modificado         *
+     *************************************************/
+    public static int quitaPorDetras(int x, int n) {
+        do {
+            x /= 10;
+            n--;
+        } while ( n > 0);
+        return x;
+    } 
+
+    /*************************************************
+     * @param n introduce el dígito                  *
+     * @param x Introduce el número                  *
+     * @return devuelve el número modificado         *
+     *************************************************/
+    public static int quitaPorDelante(int x, int n) {
+        x = voltea(x);
+        do {
+            x /= 10;
+            n--;
+        } while ( n > 0);
+        x = voltea(x);
+        return x;
+    } 
+
+    /*************************************************
+     * @param n introduce el dígito                  *
+     * @param x Introduce el número                  *
+     * @return devuelve el número modificado         *
+     *************************************************/
+    public static int pegaPorDetras(int x, int n) {
+        x = (x * 10) + n;
+        return x;
+    } 
+
+    /*************************************************
+     * @param n introduce el dígito                  *
+     * @param x introduce el número                  *
+     * @return devuelve el número modificado         *
+     *************************************************/
+    public static int pegaPorDelante(int x, int n) {
+        x = voltea(x);
+        x = (x * 10) + n;
+        x = voltea(x);
+        return x;
+    } 
+    
+    /*************************************************
+     * @param n introduce la posición inicial        *
+     * @param n1 introduce la posición final         *
+     * @param x introduce el número                  *
+     * @return devuelve el número modificado         *
+     *************************************************/
+    public static int trozoDeNumero(int x, int n, int n1) {
+        int longitud = digitos(x);
+        x = quitaPorDelante(x, n);
+        x = quitaPorDetras(x, longitud - n1 - 1);
+        return x;
+    } 
+
+    /*************************************************
+     * @param n introduce la posición inicial        *
+     * @param n1 introduce la posición final         *
+     * @param x introduce el número                  *
+     * @return devuelve el número modificado         *
+     *************************************************/
+    public static int juntaNumeros(int x, int x1) {
+        x = x * (int)potencia(10, digitos(x1)) + x1;
+        return x;
     } 
 }
