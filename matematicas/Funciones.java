@@ -51,9 +51,13 @@ public class Funciones {
      * @return true si es primo, false si no lo es   *
      *************************************************/
     public static boolean esPrimo(int n) {
-        for (int i = 2; i < n / 2; i++) {
-            if (n % i == 0) {
-                   return false;
+        if (n < 2) {
+            return false;
+        } else {
+            for (int i = n / 2; i >= 2; i--) {
+                if (n % i == 0) {
+                    return false;
+                }
             }
         }
         return true;
