@@ -72,4 +72,44 @@ public class Arrays {
         }
         return maximo;
     }
+
+    /*************************************************
+     * @param x Introduce un array                   *
+     * @return  Devuelve la media                    *
+     *************************************************/
+    public static double mediaArrayInt(int x[]) {
+        int sumaTotal = 0;
+        for (int i : x) {
+            sumaTotal += i;
+        }
+        return (double)sumaTotal / x.length;
+    }
+
+    /*************************************************
+     * @param x Introduce un array                   *
+     * @param n Indica el número                     *
+     * @return  Devuelve si está o no                *
+     *************************************************/
+    public static boolean estaEnArrayInt(int x[], int n) {
+        for (int i : x) {
+            if (n == i) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /*************************************************
+     * @param x Introduce un array                   *
+     * @param n Indica el número                     *
+     * @return  Devuelve la posicion                 *
+     *************************************************/
+    public static int posicionEnArray(int x[], int n) {
+        for (int i = 0; i < x.length; i++) {
+            if (n == x[i]) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
