@@ -38,7 +38,7 @@ public class Arrays {
     /*************************************************
      * @param x Introduce un array                   *
      *************************************************/
-    public static void muestraArrayInt(int x[]) {
+    public static void muestraArrayInt(int[] x) {
         for (int i : x) {
             System.out.print(i + " ");
         }
@@ -49,7 +49,7 @@ public class Arrays {
      * @param x Introduce un array                   *
      * @return  Devuelve el mínimo                   *
      *************************************************/
-    public static int minimoArrayInt(int x[]) {
+    public static int minimoArrayInt(int[] x) {
         int minimo = Integer.MAX_VALUE;
         for (int i = 0; i < x.length; i++) {
             if (x[i] < minimo) {
@@ -63,7 +63,7 @@ public class Arrays {
      * @param x Introduce un array                   *
      * @return  Devuelve el máximo                   *
      *************************************************/
-    public static int maximoArrayInt(int x[]) {
+    public static int maximoArrayInt(int[] x) {
         int maximo = Integer.MIN_VALUE;
         for (int i = 0; i < x.length; i++) {
             if (x[i] > maximo) {
@@ -77,7 +77,7 @@ public class Arrays {
      * @param x Introduce un array                   *
      * @return  Devuelve la media                    *
      *************************************************/
-    public static double mediaArrayInt(int x[]) {
+    public static double mediaArrayInt(int[] x) {
         int sumaTotal = 0;
         for (int i : x) {
             sumaTotal += i;
@@ -90,7 +90,7 @@ public class Arrays {
      * @param n Indica el número                     *
      * @return  Devuelve si está o no                *
      *************************************************/
-    public static boolean estaEnArrayInt(int x[], int n) {
+    public static boolean estaEnArrayInt(int[] x, int n) {
         for (int i : x) {
             if (n == i) {
                 return true;
@@ -104,12 +104,64 @@ public class Arrays {
      * @param n Indica el número                     *
      * @return  Devuelve la posicion                 *
      *************************************************/
-    public static int posicionEnArray(int x[], int n) {
+    public static int posicionEnArray(int[] x, int n) {
         for (int i = 0; i < x.length; i++) {
             if (n == x[i]) {
                 return i;
             }
         }
         return -1;
+    }
+
+    /*************************************************
+     * @param x Introduce un array                   *
+     * @return  Devuelve el array volteado           *
+     *************************************************/
+    public static int[] volteaArrayInt(int[] x) {
+        int[] a = new int[x.length];
+        for (int i = 0; i < x.length; i++) {
+            a[x.length - i - 1] = x[i];
+        }
+        return a;
+    }
+
+    /*************************************************
+     * @param x Introduce un array                   *
+     * @param n núero de rotaciones derecha          *
+     * @return  Devuelve el array rotado             *
+     *************************************************/
+    public static int[] rotaDerechaArrayInt(int[] x, int n) {
+        int[] a = x;
+        int i;
+        int aux;
+
+        while (n-- > 0) {
+            aux = a[a.length - 1];
+            for (i = a.length - 1; i > 0; i--) {
+                a[i] = a[i - 1];
+            }
+            a[0] = aux;
+        }
+        return a;
+    }
+
+    /*************************************************
+     * @param x Introduce un array                   *
+     * @param n núero de rotaciones izquierda        *
+     * @return  Devuelve el array rotado             *
+     *************************************************/
+    public static int[] rotaIzquierdaArrayInt(int[] x, int n) {
+        int[] a = x.clone();
+        int i;
+        int aux;
+
+        while (n-- > 0) {
+            aux = a[0];
+            for (i = 0; i < a.length - 1 ; i++) {
+                a[i] = a[i + 1];
+            }
+            a[a.length - 1] = aux;
+        }
+        return a;
     }
 }
