@@ -43,4 +43,26 @@ public class ArraysBi {
         }
         return array;
     }
+
+    /*************************************************
+     * @param array Introduce un array bidimensional *
+     * @return  Muestra un array bidimensional       *
+     *************************************************/
+    public static void muestraArrayBiInt(int[][] array){
+        for (int[] i : array) {
+            for (int j : i) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /*************************************************
+     * @param array Introduce un array bidimensional *
+     * @param i Indica que fila quieres              *
+     * @return  Devuelve la fila i-ésima             *
+     *************************************************/
+    public static int[] filaDeArrayBiInt(int[][] array, int i){
+        return array[i];
+    }
 }
