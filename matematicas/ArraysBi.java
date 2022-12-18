@@ -51,7 +51,7 @@ public class ArraysBi {
     public static void muestraArrayBiInt(int[][] array){
         for (int[] i : array) {
             for (int j : i) {
-                System.out.print(j + " ");
+                System.out.printf("%3d", j);
             }
             System.out.println();
         }
@@ -64,5 +64,21 @@ public class ArraysBi {
      *************************************************/
     public static int[] filaDeArrayBiInt(int[][] array, int i){
         return array[i];
+    }
+
+    /*************************************************
+     * @param array Introduce un array bidimensional *
+     * @param j Indica que columna quieres           *
+     * @return  Devuelve la columna j-ésima          *
+     *************************************************/
+    public static int[][] columnaDeArrayBiInt(int[][] array, int j){
+        for (int i = 0; i < array.length; i++) {
+            for (int k = 0; k < array.length; k++) {
+                if (k == j) {
+                    System.out.printf("\n%3d", array[i][k]);
+                }
+            }
+        }
+        return array;
     }
 }

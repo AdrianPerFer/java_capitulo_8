@@ -14,10 +14,14 @@ public class Ejercicio29a34 {
         int y = sc.nextInt();
         System.out.print("Fila que queremos ver: ");
         int i = sc.nextInt();
+        System.out.print("Columna que queremos ver: ");
+        int j = sc.nextInt();
         int[][] array = ArraysBi.generaArrayBiInt(n, m, x, y);
-        int[] fila = ArraysBi.filaDeArrayBiInt(array, i);
         ArraysBi.muestraArrayBiInt(array);
         System.out.println();
+        int[] fila = ArraysBi.filaDeArrayBiInt(array, i);        
         Arrays.muestraArrayInt(fila);
+        ArraysBi.columnaDeArrayBiInt(array, j);
+        System.out.println();
     }    
 }
