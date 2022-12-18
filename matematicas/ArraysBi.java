@@ -71,14 +71,11 @@ public class ArraysBi {
      * @param j Indica que columna quieres           *
      * @return  Devuelve la columna j-ésima          *
      *************************************************/
-    public static int[][] columnaDeArrayBiInt(int[][] array, int j){
+    public static int[] columnaDeArrayBiInt(int[][] array, int j){
+        int [] a = new int[array.length];
         for (int i = 0; i < array.length; i++) {
-            for (int k = 0; k < array.length; k++) {
-                if (k == j) {
-                    System.out.printf("\n%3d", array[i][k]);
-                }
-            }
+            a[i] = array[i][j];
         }
-        return array;
+        return a;
     }
 }

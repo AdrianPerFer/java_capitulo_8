@@ -19,9 +19,11 @@ public class Ejercicio29a34 {
         int[][] array = ArraysBi.generaArrayBiInt(n, m, x, y);
         ArraysBi.muestraArrayBiInt(array);
         System.out.println();
-        int[] fila = ArraysBi.filaDeArrayBiInt(array, i);        
+        int[] fila = ArraysBi.filaDeArrayBiInt(array, i);
+        int[] columna = ArraysBi.columnaDeArrayBiInt(array, j);          
         Arrays.muestraArrayInt(fila);
-        ArraysBi.columnaDeArrayBiInt(array, j);
+        System.out.println();
+        Arrays.muestraArrayInt(columna);
         System.out.println();
     }    
 }
