@@ -25,5 +25,7 @@ public class Ejercicio29a34 {
         System.out.println();
         Arrays.muestraArrayInt(columna);
         System.out.println();
+        Arrays.muestraArrayInt(ArraysBi.diagonal(array, 2, 2, "neso"));
+        Arrays.muestraArrayInt(ArraysBi.diagonal(array, 2, 2, "nose"));
     }    
 }
