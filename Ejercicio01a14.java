@@ -4,7 +4,7 @@ public class Ejercicio01a14 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Input
+        //Input
         System.out.println("Funciones!!!, elige la que quieras (-1 para salir del programa)");
         System.out.println("1. esCapicua");
         System.out.println("2. esPrimo");
