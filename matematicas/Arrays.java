@@ -40,7 +40,7 @@ public class Arrays {
      *************************************************/
     public static void muestraArrayInt(int[] x) {
         for (int i : x) {
-            System.out.printf("%3d", i);
+            System.out.printf("%5d", i);
         }
         System.out.println();
     }
