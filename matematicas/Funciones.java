@@ -118,7 +118,7 @@ public class Funciones {
         while (n-- > 0) {
             x /= 10;
         }
-        return (x % 10);
+        return (int)(x % 10);
     } 
     
     /*************************************************
