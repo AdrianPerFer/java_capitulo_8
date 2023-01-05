@@ -29,5 +29,6 @@ public class Ejercicio43 {
             System.out.print(linea(' ', i));
             System.out.println(linea('*', altura - i));
         }
+        sc.close();
     }
 }
